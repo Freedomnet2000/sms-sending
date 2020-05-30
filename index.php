@@ -1,6 +1,6 @@
 <?php
 
-$url = $_GET['url'];
+$url = $_GET['url'] ?? '';
 $post = file_get_contents('php://input') ?? '';
 
 $params = $_POST;

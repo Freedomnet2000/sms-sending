@@ -1,4 +1,5 @@
 <?php
+    require 'src\models\SendSmsModel.php';
     const key = 'security111333';
 
     class SendSmsController {
@@ -15,7 +16,6 @@
                  return $responseArray;
             }
 
-            require 'src\models\SendSmsModel.php';
             $model = new SendSmsModel;
             $dbUpdate = $model->handleSms($post);
 
@@ -26,6 +26,5 @@
                 $responseArray['status'] = false;
                 return $responseArray;
             }
-
         }
     }
